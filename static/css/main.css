@@ -1,0 +1,50 @@
+* {
+  margin-block-end: 0;
+  margin-block-start: 0;
+
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  z-index: 10;
+}
+
+/* ----- html ----- */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+}
+
+.grid {
+  margin: auto;
+  position: relative;
+
+  width: 30rem;
+  height: 30rem;
+
+  flex-direction: column;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.grid::after {
+  content: "";
+
+  position:absolute;
+  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
+  top: -1rem;
+  left: -1rem;
+  z-index: -1;
+
+  border: black solid 1px
+}
