@@ -55,10 +55,11 @@ body {
   padding-top: 1rem;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
   .grid {
     width: 100vw;
     overflow: hidden;
+    padding: 1rem;
   }
 
   .grid::after {

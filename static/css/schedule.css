@@ -32,7 +32,7 @@ body {
   height: 30rem;
 
   display: grid;
-  grid-template-columns: 0.8fr repeat(6, 1fr);
+  grid-template-columns: 0.8fr repeat(5, 1fr);
   grid-template-rows: repeat(19, 1fr);
 
   place-items: center;
@@ -54,7 +54,6 @@ body {
 .grid > * {
   width: 5rem;
   max-width: 5rem;
-
 }
 
 .time {
@@ -141,13 +140,14 @@ body {
   .grid {
     width: 100vw;
     overflow: hidden;
+    padding: 1rem;
   }
 
   .grid::after {
     border: 0px !important;
   }
 
-  .time {
-    text-align: right;
+  .grid > * {
+    width: unset;
   }
 }
