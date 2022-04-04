@@ -19,6 +19,8 @@ body {
   height: 100vh;
   overflow: hidden;
 
+  margin: 0;
+
   display: flex;
 }
 
@@ -47,4 +49,19 @@ body {
   z-index: -1;
 
   border: black solid 1px
+}
+
+.grid > *+* {
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .grid {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .grid::after {
+    border: 0px !important;
+  }
 }

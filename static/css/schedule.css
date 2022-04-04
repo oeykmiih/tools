@@ -19,6 +19,8 @@ body {
   height: 100vh;
   overflow: hidden;
 
+  margin: 0;
+
   display: flex;
 }
 
@@ -133,4 +135,19 @@ body {
 #cik_f {
   grid-column: 6;
   grid-row: 5 / span 3;
+}
+
+@media screen and (max-width: 750px) {
+  .grid {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .grid::after {
+    border: 0px !important;
+  }
+
+  .time {
+    text-align: right;
+  }
 }

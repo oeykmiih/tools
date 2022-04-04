@@ -19,6 +19,8 @@ body {
   height: 100vh;
   overflow: hidden;
 
+  margin: 0;
+
   display: flex;
 }
 
@@ -47,39 +49,13 @@ body {
   left: -1rem;
   z-index: -1;
 
-  border: black solid 1px
+  border: black solid 1px;
 }
 
 
 .grid > * {
   width: 5rem;
   max-width: 5rem;
-}
-
-.event {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  
-  text-align: center;
-  display: flex;
-  place-items: center;
-  padding: 0 0.3rem;
-  
-  font-size: 0.75rem;
-}
-
-.event::after {
-  content: "";
-
-  position:absolute;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  top: 2px;
-  left: 2px;
-  z-index: -1;
-
-  border: black solid 1px;
 }
 
 .grid input {
@@ -150,4 +126,15 @@ body {
   max-width: 100%;
 
   text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .grid {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .grid::after {
+    border: 0px !important;
+  }
 }
