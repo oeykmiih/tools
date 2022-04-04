@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timetable</title>
+    <title>tools > scale</title>
 
     <link rel="stylesheet" href="static\css\scale.css">
 </head>
@@ -13,28 +13,30 @@
         <p class="title">ratio</p>
         <p class="title">real</p>
         <p class="title">scale</p>
-        <input id="scale-r" class="input-1" onchange="change_scales();" onkeyup="change_scales();" value="1">
+        <input id="scale-r" class="input-1" onchange="change_scaler();" onkeyup="change_scaler();" value="1">
         <input id="scale-s" class="input-1" onchange="change_scales();" onkeyup="change_scales();" value="100">
-        <input id="unit-r-n"t type="text">
-        <input id="unit-s-n" type="text">
-        <select id="unit-r-u" name="unitr" id="">
+        <input id="length-r"t type="text" onchange="change_scaler();" onkeyup="change_scaler();" value="1">
+        <input id="length-s" type="text" onchange="change_scales();" onkeyup="change_scales();">
+        <select id="unit-r" name="unitr" onchange="change_scaler();" onkeyup="change_scaler();">
             <option value="mm">mm</option>
             <option value="cm">cm</option>
+            <option value="m" selected>meters</option>
+            <option value="km">km</option>
+            <option value="in">inches</option>
+            <option value="ft">feet</option>
+            <option value="mi">miles</option>
+        </select>
+        <select id="unit-s" name="units" onchange="change_scales();" onkeyup="change_scales();">
+            <option value="mm">mm</option>
+            <option value="cm" selected>cm</option>
             <option value="m">meters</option>
             <option value="km">km</option>
             <option value="in">inches</option>
             <option value="ft">feet</option>
             <option value="mi">miles</option>
         </select>
-        <select id="unit-s-u" name="units" id="">
-            <option value="mm">mm</option>
-            <option value="cm">cm</option>
-            <option value="m">meters</option>
-            <option value="km">km</option>
-            <option value="in">inches</option>
-            <option value="ft">feet</option>
-            <option value="mi">miles</option>
-        </select>
+        <div id="divFormula"></div>
     </div>
+    <script src="static/scripts/scale.js"></script>
 </body>
 </html>
